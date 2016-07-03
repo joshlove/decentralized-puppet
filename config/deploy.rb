@@ -1,13 +1,13 @@
 # config valid only for current version of Capistrano
 lock '3.5.0'
 
-set :application, 'shellicopter'
-set :repo_url, 'git@github.com:joshlove/shellicopter.git'
+set :application, 'puppet'
+set :repo_url, 'git@github.com:joshlove/decentralized-puppet.git'
 
-# set :puppet_roles, :app
-# set :puppet_modulepath, "roles:modules"
+set :puppet_roles, :all
+set :puppet_modulepath, "~/puppet/modules"
 
-set :deploy_to, "/home/vagrant/#{fetch(:application)}"
+set :deploy_to, "/home/vagrant/#{fetch(:application)}_deploy"
 set :pty, true
 
 task :install_git do

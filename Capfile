@@ -1,6 +1,6 @@
 # Load DSL and set up stages
 require "capistrano/setup"
-#require 'capistrano3/puppet'
+require 'capistrano3/puppet'
 
 # Include default deployment tasks
 require "capistrano/deploy"
