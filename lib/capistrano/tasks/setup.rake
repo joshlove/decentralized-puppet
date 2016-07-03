@@ -12,14 +12,14 @@ namespace :setup do
   desc 'Installs Git'
   task :install_git do
     on roles(:all) do
-      execute :sudo, "apt-get install git"
+      execute :sudo, "apt-get -y install git"
     end
   end
 
   desc 'Installs puppet'
   task :install_puppet do
     on roles(:all) do
-      execute :sudo, "apt-get install puppet"
+      execute :sudo, "apt-get -y install puppet"
       execute :ln, "-s ~/puppet_deploy/current ~/puppet"
     end
   end
