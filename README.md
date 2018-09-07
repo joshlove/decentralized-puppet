@@ -1,5 +1,5 @@
 # Decentralized-puppet
-My goal is to come up with a simple decentralized puppet kicker similar to the one I use everyday at work. 
+My goal is to come up with a simple decentralized puppet kicker similar to the one I use everyday at work.
 
 Desired functionality:
 
@@ -10,6 +10,8 @@ Desired functionality:
 3. deploy to a target, manifest runs on that target. (done)
 4. Ability to do some minimal environment prep through cap3 recipes. (done, check setup rake file)
 
+### test
+
 ### Tasks
 
 ```bundle exec cap <stage> setup```
@@ -19,4 +21,3 @@ Setup does some basic things like an apt-get update and installing git (requirem
 ```bundle exec cap <stage> deploy```
 
 deploy runs a puppet apply against ~/puppet/manifest/<stage name>.pp, and sets the modulepath to ~/puppet/modules
-
